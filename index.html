@@ -39,7 +39,7 @@
 
 </head>
 <body>
-    <section id="bg" class="section target section-full overflow-hidden">
+    <section id="bg" class="section target section-full overflow-hidden" style="width: 100vw; height: 100vh;">
         <div class="position-absolute bg-whiter w-100 h-100" style="top: 0;">
             <div style="cursor: pointer; opacity: 0.9; position: absolute; left: 0px; top: 0px; z-index: 9000;">
                 <canvas width="80" height="48" style="width: 80px; height: 48px; display: block;"></canvas>
@@ -47,7 +47,7 @@
                 <canvas width="80" height="48" style="width: 80px; height: 48px; display: none;"></canvas>
             </div>
             <canvas width="750" height="520"
-                style="touch-action: none; cursor: inherit; width: 750px; height: 520px;"></canvas>
+                style="touch-action: none; cursor: inherit; width: 750px; height: 520px; object-fit: cover;"></canvas>
         </div>
 
         <canvas id="rainCanvas" class="position-absolute w-100 h-100" style="top: 0;"></canvas>
@@ -55,34 +55,17 @@
         <!-- Overlay -->
         <div class="bg-overlay bg-overlay-rainy"></div>
 
-        <!-- Content -->
-        <div class="container">
-            <div id="control_panel" class="row justify-content-center align-items-center">
-                <div class="col-auto">
-                    <p class="mb-4">
-                        <a href="#modal-video" data-toggle="modal" class="btn btn-circle btn-outline-primary"
-                            title="Guideline | 使用説明">
-                            <i class="fas fa-cog fa-lg"></i>
-                        </a>
-                    </p>
-                </div>
-                <div class="col-auto">
-                    <p class="mb-4">
-                        <a id="control-expand" href="#" class="btn btn-circle btn-outline-primary"
-                            title="Fullscreen | フルスクリーン">
-                            <i class="fas fa-expand fa-lg fa-xl"></i>
-                        </a>
-                    </p>
-                </div>
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
-
     </section>
+
+    <!-- Content -->
+    <a href="#modal-video" data-toggle="modal" class="position-absolute w-100 h-100"
+        style="top: 0; left: 0;">
+    </a>
 
     <!-- MODAL
           ================================================== -->
     <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-header"
-        aria-hidden="true">
+        aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
 
@@ -107,98 +90,13 @@
                         Rainy Wallpaper Window
                     </h2>
 
-                    <!-- Heading -->
-                    <p class="text-center text-muted mb-4">Art by
-                        <a href="https://twitter.com/neo_torri">鳥居線 & Blazey</a>, Rainy Illustration by<a
-                            href="https://twitter.com/BlazeyDraws"> Arce</a>
-                    </p>
-
-                    <!-- Subheading -->
-                    <p class="text-center text-muted mb-5">
-                        ウィンドウをフルスクリーンにして、お気に入りの音楽を流せば,<br>
-                        一瞬でダイナミックなテーブルクロスに早変わり。
-                    </p>
-
-                    <div class="container">
-                        <div class="faq">
-                            <div class="faq-item">
-                                <!-- Heading -->
-                                <a href="#item-content-r1" class="faq-item-heading" data-toggle="collapse"
-                                    aria-controls="item-content-r1" aria-expanded="true" role="button">
-                                    フルスクリーンウィンドウで表示するにはどうすればよいですか？
-                                </a>
-                                <!-- Content -->
-                                <div class="faq-item-content collapse show" id="item-content-r1">
-                                    <div class="faq-item-content-inner">
-                                        <p><i class="fas fa-expand fa-lg fa-xl"></i> このボタンを探して、クリックします。</p>
-                                        <p>ウィンドウが通常の状態であれば、フルスクリーンモードになります。</p>
-                                        <p>ウィンドウが全画面表示になっている場合は、通常の表示に戻ります。</p>
-                                        <p><span class="text-danger">*</span> アクションボタンが消えたら、マウスを画面中央に移動させるだけで表示されます。</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <!-- Heading -->
-                                <a href="#item-content-r2" class="faq-item-heading" data-toggle="collapse"
-                                    aria-controls="item-content-r2" aria-expanded="false" role="button">
-                                    マスクの透明度を調整することはできますか？
-                                </a>
-                                <!-- Content -->
-                                <div class="faq-item-content collapse ow" id="item-content-r2">
-                                    <div class="faq-item-content-inner">
-                                        <div class="form-group">
-                                            <label class="col-form-label">Mask Opacity
-                                                <span class="badge badge-secondary ml-2">0.55</span></label>
-                                            <input type="range" class="form-control-range" id="formControlRange"
-                                                value="0.55" min="0" max="1"
-                                                step="0.01">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <!-- Heading -->
-                                <a href="#item-content-r3" class="faq-item-heading" data-toggle="collapse"
-                                    aria-controls="item-content-r3" aria-expanded="false" role="button">
-                                    BGMとこのウィンドウを同時に再生するとはどういうことですか？
-                                </a>
-                                <!-- Content -->
-                                <div class="faq-item-content collapse ow" id="item-content-r3">
-                                    <div class="faq-item-content-inner">
-                                        <div class="form-group">
-                                            <label class="col-form-label">Here is the video demonstration.</label>
-
-                                            <!-- Video -->
-                                            <!-- <video src="/video/hachi-11k-rainy-room.mp44" class="img-fluid" controls></video> -->
-                                            <video class="img-fluid" controls playsinline preload="metadata">
-                                                <source src="/video/hachi-11k-rainy_room.mp4" type="video/mp4">
-                                                HTML video is not supported by your browser.
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Mask Opacity
+                            <span class="badge badge-secondary ml-2">0.1</span></label>
+                        <input type="range" class="form-control-range" id="formControlRange"
+                            value="0.1" min="0" max="1"
+                            step="0.01">
                     </div>
-                    <!-- <form class="container">
-                          <div class="form-group">
-                              <label class="col-form-label">Mask Opacity<span class="badge badge-secondary ml-2">0.55</span></label>
-                              <input type="range" class="form-control-range" id="formControlRange" value="0.55" min="0"max="1" step="0.01">
-                          </div>
-                          <div class="form-group">
-                              <label class="col-form-label">Video demonstration</label>
-                              <video class="img-fluid" controls playsinline preload="metadata">
-                                  <source src="/video/hachi-11k-rainy_room.mp4" type="video/mp4">
-                                  HTML video is not supported by your browser.
-                              </video>
-                          </div>
-                      </form> -->
-
-                </div>
-                <div class="modal-footer">
 
                 </div>
             </div> <!-- / .modal-content -->
@@ -208,6 +106,7 @@
     <!-- Custom JS -->
     <script src="libs/Stats.min.js"></script>
     <script src="libs/pixi.min.js"></script>
-    <script src="main.js"></script>
+    <script src="index.js"></script>
+    <script src="rain.js"></script>
 </body>
 </html>
