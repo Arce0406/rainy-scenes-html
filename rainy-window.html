@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACHI Celebration 2022 | Rainy Wallpaper Window</title>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="libs/flickity/dist/flickity.min.css">
+    <link rel="stylesheet" href="libs/flickity-fade/flickity-fade.css">
+    <link rel="stylesheet" href="libs/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="libs/highlightjs/styles/codepen-embed.css">
+    <!-- <link rel="stylesheet" href="libs/@fortawesome/fontawesome-freecss/all.min.css"> -->
+    <link rel="stylesheet" href="libs/incline-icons/style.min.css">
+    <link rel="stylesheet" href="libs/normalize/8.0.1/normalize.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <!-- Material Design Icon  -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Custom -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global JS -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="libs/flickity-fade/flickity-fade.js"></script>
+    <script src="libs/jquery-parallax.js/parallax.min.js"></script>
+    <script src="libs/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="libs/waypoints/lib/shortcuts/inview.min.js"></script>
+    <script src="libs/fullpage.js/vendors/scrolloverflow.min.js"></script>
+    <script src="libs/fullpage.js/dist/fullpage.min.js"></script>
+    <script src="libs/highlightjs/highlight.pack.min.js"></script>
+    <!-- Theme JS -->
+    <script src="libs/theme.min.format.js"></script>
+
+</head>
+<body>
+    <section id="bg" class="section target section-full overflow-hidden">
+        <div class="position-absolute bg-whiter w-100 h-100" style="top: 0;">
+            <div style="cursor: pointer; opacity: 0.9; position: absolute; left: 0px; top: 0px; z-index: 9000;">
+                <canvas width="80" height="48" style="width: 80px; height: 48px; display: block;"></canvas>
+                <canvas width="80" height="48" style="width: 80px; height: 48px; display: none;"></canvas>
+                <canvas width="80" height="48" style="width: 80px; height: 48px; display: none;"></canvas>
+            </div>
+            <canvas width="750" height="520"
+                style="touch-action: none; cursor: inherit; width: 750px; height: 520px;"></canvas>
+        </div>
+
+        <canvas id="rainCanvas" class="position-absolute w-100 h-100" style="top: 0;"></canvas>
+
+        <!-- Overlay -->
+        <div class="bg-overlay bg-overlay-rainy"></div>
+
+        <!-- Content -->
+        <div class="container">
+            <div id="control_panel" class="row justify-content-center align-items-center">
+                <div class="col-auto">
+                    <p class="mb-4">
+                        <a href="#modal-video" data-toggle="modal" class="btn btn-circle btn-outline-primary"
+                            title="Guideline | 使用説明">
+                            <i class="fas fa-cog fa-lg"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <p class="mb-4">
+                        <a id="control-expand" href="#" class="btn btn-circle btn-outline-primary"
+                            title="Fullscreen | フルスクリーン">
+                            <i class="fas fa-expand fa-lg fa-xl"></i>
+                        </a>
+                    </p>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+
+    </section>
+
+    <!-- MODAL
+          ================================================== -->
+    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-header"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+
+                <!-- Header -->
+                <div class="modal-header" style="border-bottom: 1px solid #dee2e6;">
+
+                    <!-- Title -->
+                    <h4 class="modal-title" id="modal-video-header">
+                        Guideline | 使用説明
+                    </h4>
+
+                    <!-- Close -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+
+                    <!-- Heading -->
+                    <h2 class="text-center my-4">
+                        Rainy Wallpaper Window
+                    </h2>
+
+                    <!-- Heading -->
+                    <p class="text-center text-muted mb-4">Art by
+                        <a href="https://twitter.com/neo_torri">鳥居線 & Blazey</a>, Rainy Illustration by<a
+                            href="https://twitter.com/BlazeyDraws"> Arce</a>
+                    </p>
+
+                    <!-- Subheading -->
+                    <p class="text-center text-muted mb-5">
+                        ウィンドウをフルスクリーンにして、お気に入りの音楽を流せば,<br>
+                        一瞬でダイナミックなテーブルクロスに早変わり。
+                    </p>
+
+                    <div class="container">
+                        <div class="faq">
+                            <div class="faq-item">
+                                <!-- Heading -->
+                                <a href="#item-content-r1" class="faq-item-heading" data-toggle="collapse"
+                                    aria-controls="item-content-r1" aria-expanded="true" role="button">
+                                    フルスクリーンウィンドウで表示するにはどうすればよいですか？
+                                </a>
+                                <!-- Content -->
+                                <div class="faq-item-content collapse show" id="item-content-r1">
+                                    <div class="faq-item-content-inner">
+                                        <p><i class="fas fa-expand fa-lg fa-xl"></i> このボタンを探して、クリックします。</p>
+                                        <p>ウィンドウが通常の状態であれば、フルスクリーンモードになります。</p>
+                                        <p>ウィンドウが全画面表示になっている場合は、通常の表示に戻ります。</p>
+                                        <p><span class="text-danger">*</span> アクションボタンが消えたら、マウスを画面中央に移動させるだけで表示されます。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <!-- Heading -->
+                                <a href="#item-content-r2" class="faq-item-heading" data-toggle="collapse"
+                                    aria-controls="item-content-r2" aria-expanded="false" role="button">
+                                    マスクの透明度を調整することはできますか？
+                                </a>
+                                <!-- Content -->
+                                <div class="faq-item-content collapse ow" id="item-content-r2">
+                                    <div class="faq-item-content-inner">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Mask Opacity
+                                                <span class="badge badge-secondary ml-2">0.55</span></label>
+                                            <input type="range" class="form-control-range" id="formControlRange"
+                                                value="0.55" min="0" max="1"
+                                                step="0.01">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <!-- Heading -->
+                                <a href="#item-content-r3" class="faq-item-heading" data-toggle="collapse"
+                                    aria-controls="item-content-r3" aria-expanded="false" role="button">
+                                    BGMとこのウィンドウを同時に再生するとはどういうことですか？
+                                </a>
+                                <!-- Content -->
+                                <div class="faq-item-content collapse ow" id="item-content-r3">
+                                    <div class="faq-item-content-inner">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Here is the video demonstration.</label>
+
+                                            <!-- Video -->
+                                            <!-- <video src="/video/hachi-11k-rainy-room.mp44" class="img-fluid" controls></video> -->
+                                            <video class="img-fluid" controls playsinline preload="metadata">
+                                                <source src="/video/hachi-11k-rainy_room.mp4" type="video/mp4">
+                                                HTML video is not supported by your browser.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <form class="container">
+                          <div class="form-group">
+                              <label class="col-form-label">Mask Opacity<span class="badge badge-secondary ml-2">0.55</span></label>
+                              <input type="range" class="form-control-range" id="formControlRange" value="0.55" min="0"max="1" step="0.01">
+                          </div>
+                          <div class="form-group">
+                              <label class="col-form-label">Video demonstration</label>
+                              <video class="img-fluid" controls playsinline preload="metadata">
+                                  <source src="/video/hachi-11k-rainy_room.mp4" type="video/mp4">
+                                  HTML video is not supported by your browser.
+                              </video>
+                          </div>
+                      </form> -->
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div> <!-- / .modal-content -->
+        </div> <!-- / .modal-dialog -->
+    </div> <!-- / .modal -->
+
+    <!-- Custom JS -->
+    <script src="libs/Stats.min.js"></script>
+    <script src="libs/pixi.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* Bulma */
+
+/* .has-filter {
+  display: block;
+  transition: all 1s ease-out;
+  opacity: 1;
+  max-height: 500px;
+}
+.has-filter.d-none {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+} */
+
+.field.is-grouped {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.3em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.buttons .button {
+  margin-bottom: 0.5rem;
+}
+
+.buttons:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.buttons .button:not(:last-child):not(.is-fullwidth) {
+  margin-right: 0.5rem;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/*  Custom*/
+
+.btn-filter .btag {
+  border: 1px lightgrey solid;
+  border-radius: 12px;
+  color: #c0c0c0;
+  border-color: #c0c0c0;
+}
+
+.btn-filter .btag.is-checked {
+  background-color: white;
+  color: #f5ba4b;
+  border: 1px #f5ba4b solid;
+  border-radius: 12px;
+}
+
+.btn-filter .btag.is-checked::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f00c';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  padding-right: 0.5rem;
+}

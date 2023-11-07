@@ -1,0 +1,31 @@
+* {
+  scroll-behavior: smooth;
+}
+
+/* Google Font */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.material-symbols-outlined.is-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+:root {
+  --bg-overlay-opacity-rainy: 0.55;
+}
+
+.bg-overlay-rainy {
+  opacity: var(--bg-overlay-opacity-rainy);
+}
+
+.is-hidden {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.is-hidden:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
