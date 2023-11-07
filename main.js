@@ -1,7 +1,7 @@
-const path_alpha = 'img/alpha.png';
-const path_shine = 'img/shine.png';
-const path_bg = 'img/hachi/bg.jpg';
-const path_fg = 'img/hachi/fg.jpg';
+const path_alpha = 'rainy-scenes-html/img/alpha.png';
+const path_shine = 'rainy-scenes-html/img/shine.png';
+const path_bg = 'rainy-scenes-html/img/hachi/bg.jpg';
+const path_fg = 'rainy-scenes-html/img/hachi/fg.jpg';
 
 /**
 * Raindrop fragment shader, being used by PIXI.js in the EffectCanvas object
